@@ -19,6 +19,47 @@
 (global-set-key (kbd "C-)") 'forward-sexp)
 (global-set-key (kbd "<f12>") 'open-init-dired)
 
+(use-package evil
+  :ensure t
+  :config
+  (evil-mode 1)
+
+  (use-package evil-leader
+    :ensure t
+    :config
+	(setcdr evil-insert-state-map nil)
+	(define-key evil-insert-state-map [escape] 'evil-normal-state)
+	(define-key evil-normal-state-map (kbd "S") 'save-buffer)
+    (progn
+      (global-evil-leader-mode)
+      (setq evil-leader/in-all-states t)
+	  (evil-leader/set-leader "SPC")
+	  (evil-leader/set-key
+		"co" 'evilnc-comment-or-uncomment-lines
+		"cc" 'evilnc-copy-and-comment-lines
+		"cp" 'evilnc-comment-or-uncomment-paragraphs
+		"ff" 'counsel-find-file
+		"fg" 'counsel-git
+		"fp" 'projectile--find-file
+		"fr" 'counsel-recentf
+		"bb" 'counsel-switch-buffer
+		"ww" 'ace-window
+		"wl" 'split-window-right
+		"wh" 'split-window-below
+		":"  'counsel-M-x
+		"ga"  'counsel-ag
+		"gr"  'counsel-rg
+		"w0" 'ace-delete-other-windows)))
+  )
+
+(use-package evil-nerd-commenter
+  :ensure t)
+
+(use-package evil-surround
+  :ensure t
+  :config
+  (global-evil-surround-mode 1))
+
 (use-package
   hydra
   :ensure t)

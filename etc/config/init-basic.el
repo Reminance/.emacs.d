@@ -96,6 +96,9 @@
 (setq-default indent-tabs-mode t) 
 (setq-default tab-width 4)
 
+;; 行号
+(global-linum-mode t)
+
 ;; 高亮括号
 (show-paren-mode 1)
 
@@ -183,8 +186,10 @@
 
 ;; 相对行号，默认未开启
 (use-package linum-relative
-  :disabled
+  ;; :disabled
   :ensure t
-  :hook ('prog-mode . 'linum-relative-mode))
+  ;; :hook ('prog-mode . 'linum-relative-mode))
+  :config
+  (linum-relative-global-mode))
 
 (provide 'init-basic)
