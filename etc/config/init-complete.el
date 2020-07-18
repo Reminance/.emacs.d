@@ -4,7 +4,7 @@
   :defer 2 
   :hook (after-init . global-company-mode) 
   :init (setq company-tooltip-align-annotations t company-idle-delay 0 company-echo-delay 0
-              company-minimum-prefix-length 1 company-require-match nil company-dabbrev-ignore-case
+              company-minimum-prefix-length 2 company-require-match nil company-dabbrev-ignore-case
               nil company-dabbrev-downcase nil company-show-numbers t) 
   :config 
   :bind (:map company-active-map
