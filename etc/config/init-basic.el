@@ -154,12 +154,13 @@
 ;; 强大的跳转工具
 (use-package avy 
   :ensure t
-  :bind (("M-g :" . 'avy-goto-char)
-         ("M-g '" . 'avy-goto-char-2)
-         ("M-g \"" . 'avy-goto-char-timer)
-         ("M-g f" . 'avy-goto-line)
-         ("M-g w" . 'avy-goto-word-1)
-         ("M-g e" . 'avy-goto-word-0)))
+  ;; :bind (("M-g c" . 'avy-goto-char)
+  ;;        ("M-g C" . 'avy-goto-char-2)
+  ;;        ("M-g \"" . 'avy-goto-char-timer)
+  ;;        ("M-g l" . 'avy-goto-line)
+  ;;        ("M-g w" . 'avy-goto-word-1)
+  ;;        ("M-g e" . 'avy-goto-word-0)))
+  )
 
 ;;;; emacs 调用 rime输入法的前端，强烈推荐
 ;;(push '(progn

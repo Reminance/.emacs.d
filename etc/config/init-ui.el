@@ -113,7 +113,7 @@
 ;;   (setq dashboard-banner-logo-title
 ;;         "title to edit")
 ;;   ;; 设置banner
-;;   (setq dashboard-startup-banner "~/.emacs.d/var/banner/a.png") 
+;;   (setq dashboard-startup-banner "~/.emacs.d/var/banner/banner.png") 
 ;;   (setq dashboard-center-content t) 
 ;;   (setq dashboard-set-heading-icons t) 
 ;;   ;; (setq dashboard-set-file-icons t) 

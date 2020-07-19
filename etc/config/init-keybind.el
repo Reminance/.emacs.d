@@ -48,9 +48,15 @@
 		"wl" 'split-window-right
 		"wh" 'split-window-below
 		":"  'counsel-M-x
-		"ga"  'counsel-ag
-		"gr"  'counsel-rg
-		"w0" 'ace-delete-other-windows)))
+		"ga" 'counsel-ag
+		"gr" 'counsel-rg
+		"w0" 'delete-window
+        "jc" 'avy-goto-char-2
+        "jw" 'avy-goto-word-0
+        "jl" 'avy-goto-line
+        "jC" 'avy-goto-char
+        "jt" 'avy-goto-char-timer
+		)))
   )
 
 (use-package evil-nerd-commenter
