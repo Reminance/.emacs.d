@@ -1,5 +1,4 @@
 ;;; Java 支持
-(use-package lsp-ui)
 (use-package lsp-java
   :ensure t
   :config
@@ -7,5 +6,10 @@
   (add-hook 'java-mode-hook 'lsp)
   )
 (use-package dap-java :ensure nil)
+
+;; (require 'lsp-java-boot)
+;; to enable the lenses
+;; (add-hook 'lsp-mode-hook #'lsp-lens-mode)
+;; (add-hook 'java-mode-hook #'lsp-java-boot-lens-mode)
 
 (provide 'init-java)

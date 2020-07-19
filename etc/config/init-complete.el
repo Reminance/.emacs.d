@@ -39,11 +39,27 @@
   (lsp-eldoc-hook nil)
   (lsp-prefer-flymake nil)
   :bind (:map lsp-mode-map
+			  ("C-c gd" . lsp-find-definition)
+			  ("C-c gt" . lsp-find-type-definition)
+			  ("C-c gr" . lsp-find-references)
+			  ("C-c gi" . lsp-find-implementation)
+			  ("C-c C-q" . lsp-ui-doc-show)
+			  ("C-c M-q" . lsp-ui-doc-hide)
 			  ("C-c C-f" . lsp-format-buffer)
 			  ("M-RET" . lsp-ui-sideline-apply-code-actions)
 			  ("M-\\" . lsp-execute-code-action))
   :config
   (setq lsp-prefer-capf t))
+
+(with-eval-after-load 'lsp-mode
+(add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))
+
+(use-package lsp-ui
+  :custom
+  (lsp-ui-doc-enable t)
+  (lsp-ui-doc-position 'top)
+  (lsp-ui-doc-delay 0.5)
+  )
 
 ;; 各个语言的Debug工具
 (use-package dap-mode
