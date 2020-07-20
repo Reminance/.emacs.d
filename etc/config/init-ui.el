@@ -37,15 +37,15 @@
 ;;                                :size 20)) 
 ;; 	(message "无法找到Fira Code Nerd Font字体，你可以更换其他字体或安装它让这条消息消失.")) graphic-only-plugins-setting)
 
-(push '(if (fontp (font-spec :name "SauceCodePro Nerd Font Mono" 
+(push '(if (fontp (font-spec :name "SauceCodePro Nerd Font" 
 							 :style "Regular"
 							 )) 
 		   (set-face-attribute 'default nil 
 							   :font (font-spec 
-									  :name "SauceCodePro Nerd Font Mono"							 
+									  :name "SauceCodePro Nerd Font"							 
 									  :style "Regular"
 									  :size 14)) 
-		 (message "无法找到SauceCodePro Nerd Font Mono字体，你可以更换其他字体或安装它让这条消息消失.")) graphic-only-plugins-setting)
+		 (message "无法找到SauceCodePro Nerd Font字体，你可以更换其他字体或安装它让这条消息消失.")) graphic-only-plugins-setting)
 
 ;; 高亮当前行
 (global-hl-line-mode 1)
