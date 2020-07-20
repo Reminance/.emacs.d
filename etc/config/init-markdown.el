@@ -27,17 +27,17 @@
 						:size 20))
 	  (progn
 		(set-face-attribute 'markdown-table-face nil
-							:font (font-spec :name "SauceCodePro Nerd Font Mono"
+							:font (font-spec :name "SauceCodePro Nerd Font"
 											 :style "Regular"
 											 :size 14))
 		(set-face-attribute 'markdown-url-face nil
-							:font (font-spec :name "SauceCodePro Nerd Font Mono"
+							:font (font-spec :name "SauceCodePro Nerd Font"
 											 :style "Regular"
 											 :size 14))
 		(set-face-attribute 'markdown-markup-face nil
-							:font (font-spec :name "SauceCodePro Nerd Font Mono"
+							:font (font-spec :name "SauceCodePro Nerd Font"
 											 :style "Regular"
 											 :size 14)))
-	(message "无法找到SauceCodePro Nerd Font Mono字体，你可以更换其他字体或安装它让这条消息消失.")))
+	(message "无法找到SauceCodePro Nerd Font字体，你可以更换其他字体或安装它让这条消息消失.")))
 
 (provide 'init-markdown)
