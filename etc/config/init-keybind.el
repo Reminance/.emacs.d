@@ -56,6 +56,13 @@
         "jl" 'avy-goto-line
         "jC" 'avy-goto-char
         "jt" 'avy-goto-char-timer
+		"gd" 'lsp-find-definition
+		"gt" 'lsp-find-type-definition
+		"gr" 'lsp-find-references
+		"gi" 'lsp-find-implementation
+		"ds" 'lsp-ui-doc-show
+		"dh" 'lsp-ui-doc-hide
+		"fb" 'lsp-format-buffer
 		)))
   )
 
