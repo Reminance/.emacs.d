@@ -1,0 +1,65 @@
+# -*- restclient -*-
+#
+
+# C端下单
+POST http://172.16.1.27:22001/shop/api/actOrder/serviceOrder
+Act-Token: jgehJO6S4TYBwTTBq1xoYCLWmQsh3Z3R
+Content-Type: application/json
+{
+    "shopId": 1,
+    "actId": 4,
+    "recommUserId": 1,
+	"orderSimpleVoList": [{
+		"goodsId": 430664420028354561,
+		"skuId": 1,
+		"goodsAmount": 1
+	}]
+}
+
+# C端支付
+POST http://172.16.1.233:22001/shop/api/actPayment/agentCollectApply
+Act-Token: UDfcZN6BgoLHQ4CQXF6H98OKiBRdn8fh
+Content-Type: application/json
+{
+	"payMethodType": 1,
+	"businessId": 446560121699115008,
+	"amount": 0.01
+}
+
+# C端支付确认
+POST http://172.16.1.233:22001/shop/api/actPayment/payConfirm
+Act-Token: UDfcZN6BgoLHQ4CQXF6H98OKiBRdn8fh
+Content-Type: application/json
+{
+	"businessId": 446560145325629440,
+	"verificationCode": "315160"
+}
+
+# C端预发下单
+POST http://106.52.76.236:22001/shop/api/actOrder/serviceOrder
+Act-Token: RswdhyKpFXk170bt4V0996WPWZbK9PF2
+Content-Type: application/json
+{
+    "shopId": 1,
+    "actId": 4,
+    "recommUserId": 1,
+	"orderSimpleVoList": [{
+		"goodsId": 430664420028354561,
+		"skuId": 1,
+		"goodsAmount": 1
+	}]
+
+}
+
+
+# 获取B端服务订单
+POST http://172.16.1.233:22001/shop/api/actOrder/qhServiceOrderPage
+QH-APP-Token: 3QL2XOdbEMjhNxXiMlPuOGYXpElV1pN4
+Content-Type: application/json
+{
+    "pageNum": 1,
+    "pageSize": 10
+}
+
+
+

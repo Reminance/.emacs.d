@@ -241,4 +241,15 @@
 ;;  :ensure t 
 ;;  :custom (eww-search-prefix "https://google.com/search?q="))
 
+(use-package restclient
+  :ensure t
+  :mode (("\\.http\\'" . restclient-mode)))
+
+(use-package
+  company-restclient
+  :after restclient
+  :config (progn
+            (add-to-list 'company-backend 'company-restclient)
+            (add-hook 'restclient-mode-hook #'company-mode-on)))
+
 (provide 'init-tools)
